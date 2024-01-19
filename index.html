@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Expenses Chart Component</title>
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="card-header">
+      <h1 class="card-header-text">My balance</h1>
+      <h2 class="card-header-amount">$921.48</h2>
+      <!-- HTML5 landmark https://www.w3.org/TR/2011/WD-html5-author-20110809/the-figure-element.html#:~:text=The%20figure%20element%20represents%20some,main%20flow%20of%20the%20document. -->
+      <figure class="card-logo">
+        <img src="images/logo.svg" class="card-logo-img" alt="logo">
+      </figure>
+    </section>
+
+    <section class="card-body">
+      <h2 class="card-body-title">Spending - Last 7 days</h2>
+      <ul class="card-body-graph">
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+        <li class="card-body-graph-day"></li>
+      </ul>
+      <hr class="divider">
+      <div class="card-footer">
+        <!-- HTML5 landmark https://www.w3schools.com/tags/tag_article.asp -->
+        <article class="card-footer-left">
+          <h2 class="card-footer-total-text">Total this month</h2>
+          <h3 class="card-footer-total-amount">$478.33</h3>
+        </article>
+        <article class="card-footer-right">
+          <h2 class="card-footer-percentage">+2.4%</h2>
+          <h3 class="card-footer-last">from last month</h3>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Singraft" target="_blank">Singraft</a>.
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

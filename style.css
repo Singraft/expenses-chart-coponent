@@ -1,0 +1,313 @@
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 43.75rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+}
+
+.container {
+    width: 100%;
+    max-width: 50rem;
+    height: 100%;
+    max-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    width: 100%;
+    max-width: 32rem;
+    height: 7.813rem;
+    margin-bottom: 1.5rem;
+    padding: 0.65rem 2rem 0.65rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 1.2rem;
+    background-color: var(--soft-red);
+    color: var(--very-pale-orange);
+}
+
+.card-header-text {
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    color: var(--cream);
+    -webkit-text-stroke: 0.01rem var(--soft-red);
+}
+
+.card-header-amount {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    -webkit-text-stroke: 0.01rem var(--soft-red);
+}
+
+.card-logo {
+    width: fit-content;
+    align-self: flex-end;
+    padding-top: 0.75rem;
+    padding-right: 0.45rem;
+}
+
+.card-body {
+    width: 100%;
+    max-width: 32rem;
+    height: 31.938rem;
+    padding: 2rem 2.5rem;
+    position: relative;
+    border-radius: 1.2rem;
+    background-color: var(--very-pale-orange);
+}
+
+.card-body-title {
+    font-size: 2rem;
+    margin-bottom: 4.1rem;
+    -webkit-text-stroke: 0.02rem var(--cream);
+}
+
+.card-body-graph {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-body-graph-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--medium-brown);
+    -webkit-text-stroke: 0.01rem;
+}
+
+.card-body-graph-bar {
+    width: 3.15rem;
+    height: 50px;
+    margin-bottom: 0.45rem;
+    border-radius: 0.3rem;
+    background-color: var(--soft-red);
+}
+
+/* Merging attributes */
+.card-header, .card-header-text, .card-header-amount, .card-logo, .card-body, .card-body-title, .card-body-graph, .card-body-graph-bar  {
+    transition: all 0.25s ease-in-out;
+}
+
+
+.card-body-graph-bar:hover {
+    opacity: 0.55;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7 {
+    width: 52px;
+}
+
+.bar2 {
+    height: 100px;
+}
+
+.bar3 {
+    height: 150px;
+}
+
+.bar4 {
+    height: 89px;
+}
+
+.bar5 {
+    height: 67px;
+}
+
+.bar6 {
+    height: 124px;
+}
+
+.bar7 {
+    height: 73px;
+}
+
+.colour-today {
+    background-color: var(--cyan);
+}
+
+/* Handles the display of the amount, along with the javascript */
+.display-amount {
+    width: 4.7rem;
+    height: 2.5rem;
+    margin-top: -3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    letter-spacing: 0.045rem;
+    -webkit-text-stroke: 0.005rem var(--dark-brown);
+    color: var(--very-pale-orange);
+    border-radius: 4px;
+    background-color: var(--dark-brown);
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.reveal-amount {
+    opacity: 1;
+}
+
+/* Seperation between the graph and the total amount*/
+.divider {
+    margin: 2rem 0;
+    opacity: 0.1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer-total-text {
+    font-size: 1.1rem;
+    color: var(--medium-brown);
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+    -webkit-text-stroke: 0.03rem;
+}
+
+.card-footer-total-amount {
+    font-size: 3rem;
+}
+
+.card-footer-right {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.card-footer-percentage {
+    font-size: 1.1rem;
+    letter-spacing: 0.02rem;
+}
+
+.card-footer-last {
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.018rem;
+    color: var(--medium-brown);
+}
+
+.attribution {
+    font-size: 1rem; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 100%, 50%);
+}
+
+@media screen and (max-width: 580px) {
+
+    .card-header {
+        width: 92%;
+        max-width: 26.25rem;
+        height: 6.063rem;
+        margin-bottom: 1rem;
+        padding: 0 1.1rem;
+        border-radius: .7rem;
+        justify-content: center;
+    }
+
+    .card-header-text {
+        margin-bottom: .2rem;
+        font-size: 1rem;
+    }
+
+    .card-header-amount {
+        font-size: 1.5rem;
+    }
+
+    .card-logo {
+        align-self: flex-end;
+        padding-top: 0.4rem;
+        padding-right: 0rem;
+        transform: scale(.85);
+    }
+
+    .card-body {
+        width: 92%;
+        max-width: 26.25rem;
+        height: fit-content;
+        padding: 1.3rem 1rem;
+        border-radius: 0.7rem;
+        background-color: var(--very-pale-orange);
+    }
+
+    .card-body-title {
+        font-size: 1.5rem;
+        margin-bottom: 4.1rem;
+    }
+
+    .card-body-graph-bar {
+        width: 2rem;
+        border-radius: .2rem;
+    }
+
+    .card-body-graph-day {
+        font-size: 0.7rem;
+    }
+
+    .divider {
+        margin: 1.5rem 0;
+    }
+
+    .card-footer-total-text {
+        font-size: 0.95rem;
+    }
+
+    .card-footer-total-amount {
+        font-size: 1.95rem;
+    }
+
+    .card-footer-percentage,
+    .card-footer-last {
+        font-size: 1rem;
+    }
+
+    .card-footer-right {
+        margin-top: 1rem;
+    }
+
+    .display-amount {
+        transform: scale(0.78);
+    }
+}
